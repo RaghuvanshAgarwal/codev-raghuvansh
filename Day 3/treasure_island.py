@@ -16,7 +16,7 @@ if (user_choice == "left"):
                \ \__   __/ /
                 '.__'-'__.'
                     '''
-)
+                )
             print("You Win\nYou found the TREASURE")
         elif(user_choice == "blue"):
             print("Eaten by beasts.\nGame Over.")
