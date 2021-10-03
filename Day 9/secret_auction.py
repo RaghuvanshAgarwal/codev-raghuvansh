@@ -11,7 +11,7 @@ def add_new_bidder():
 def clear_screen():
     os.system("cls")
 
-# Main Logic
+# Main Logic Starts
 wants_to_continue = True
 while wants_to_continue:
     clear_screen()
@@ -32,3 +32,4 @@ for bidder in bidders_dictionary:
 
 print(logo)
 print(f"{highest_bidder} won the secret auction, Bidding Amount is ${bidders_dictionary[highest_bidder]}")
+# Main Logic Ends
