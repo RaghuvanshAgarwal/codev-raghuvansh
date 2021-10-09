@@ -41,7 +41,7 @@ def main_loop():
         print_ui(entity1,entity2)
         entity_1_follower_count = entity1["follower_count"]
         entity_2_follower_count = entity2["follower_count"]
-        print(f"Pstt, A: {entity_1_follower_count}, B: {entity_2_follower_count}")
+        #print(f"Pstt, A: {entity_1_follower_count}, B: {entity_2_follower_count}")
         user_input = input("Who Has more followers? Type 'A' or 'B' : ").lower()
         if user_input == "a":
             if entity_1_follower_count > entity_2_follower_count:
