@@ -34,9 +34,8 @@ while game_not_over:
     if snake.head.xcor() > 300 or snake.head.xcor() < -300 or snake.head.ycor() > 300 or snake.head.ycor() < -300:
         game_not_over = False
         scoreboard.game_over()
-
     for segment in snake.segments[1:]:
-        if snake.head.distance(segment) < 10:
+        if snake.head.distance(segment) < 5:
             game_not_over = False
             scoreboard.game_over()
 
