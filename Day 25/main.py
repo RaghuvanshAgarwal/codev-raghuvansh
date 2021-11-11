@@ -3,6 +3,7 @@ import pandas
 from text import Text
 
 IMAGE = "blank_states_img.gif"
+STATES_TO_LEARN_FILE_PATH = "states_to_learn.csv"
 STATES_DATA = pandas.read_csv("50_states.csv")
 
 screen = turtle.Screen()
@@ -17,8 +18,12 @@ should_continue = True
 
 while should_continue:
     user_input = screen.textinput(title=f"{len(closed_states_list)} /" +
-                                        f"{len(open_states_list) + len(closed_states_list)} States"
-                                  , prompt="What's Another State Name? | 'exit' for Exit")
+                                        f"{len(open_states_list) + len(closed_states_list)} States", prompt="What's "
+                                                                                                            "Another "
+                                                                                                            "State "
+                                                                                                            "Name? | "
+                                                                                                            "'exit' "
+                                                                                                            "for Exit")
     if user_input:
         user_input = user_input.title()
         if user_input in open_states_list:
@@ -32,4 +37,4 @@ while should_continue:
             should_continue = False
 
 missed_states = {"Missed States": open_states_list}
-pandas.DataFrame(missed_states).to_csv('states_to_learn.csv')
+pandas.DataFrame(missed_states).to_csv(STATES_TO_LEARN_FILE_PATH)
